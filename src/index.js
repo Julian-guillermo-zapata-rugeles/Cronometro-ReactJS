@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import Cronometro from './componentes/cronometro/Cronometro';
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>HOLA</h1>
+    <Cronometro/>
   </React.StrictMode>,
   document.getElementById('root')
 );
