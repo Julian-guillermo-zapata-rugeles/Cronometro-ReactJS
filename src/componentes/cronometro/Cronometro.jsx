@@ -1,5 +1,5 @@
 import react from "react";
-
+import "./Cronometro.css"
 
 
 class Cronometro extends react.Component{
@@ -25,9 +25,9 @@ class Cronometro extends react.Component{
             // si el componente está en modo de actividad 
             // entonces inicia el conteo 
             this.setState({
-                milisegundos:this.state.milisegundos+10
+                milisegundos:this.state.milisegundos+1
             })
-            if (this.state.milisegundos>90) {
+            if (this.state.milisegundos>9) {
                 // milisegundos completados
                 // hora de aumentar los segundos
                 this.setState({
@@ -89,16 +89,18 @@ class Cronometro extends react.Component{
 
 
                 <div className="display">
-                    <h2> {this.state.minutos} : {this.state.segundos} : {this.state.milisegundos} </h2>
+                    <h2> {this.state.minutos} : {this.state.segundos} : {this.state.milisegundos}0 </h2>
                 </div>
 
 
                 <div className="botones">
-                    <button onClick={this.reiniciarCronometro}>Reiniciar</button>
-                    <button onClick={this.pausarCronometro}>Pausar</button>
-                    <button onClick={this.iniciarCronometro}>Iniciar</button>
+                    <button onClick={this.reiniciarCronometro}>R</button>
+                    <button onClick={this.pausarCronometro}>P</button>
+                    <button onClick={this.iniciarCronometro}>I</button>
                 </div>
-
+                <div className="autor">
+                    julian zapata rugeles ReactJS
+                </div>
             </div>
         )
     }
